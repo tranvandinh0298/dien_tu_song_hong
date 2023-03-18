@@ -1,0 +1,108 @@
+.slide__content {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff !important;
+}
+
+.slide__content .title {
+    text-align: center;
+    margin-left: -100px;
+    margin-top: 150px;
+    font-weight: normal;
+}
+
+.slide__content .homepage-headline {
+    font-size: 45px !important;
+}
+
+.slide__content .mytxt,
+.slide__content .mytxt ul li span,
+.slide__content .mytxt ul li font {
+    font-size: 22px !important;
+    color: #fff !important;
+}
+
+.ppro-box:nth-child(4n + 1) {
+    margin-left: 0;
+}
+
+.pagehding-sec .page-heading {
+    font-size: 28px;
+}
+
+.pagehding-sec .page-heading p,
+.pagehding-sec .page-heading span,
+.pagehding-sec .page-heading li {
+    margin-top: 10px;
+    font-size: 22px !important;
+}
+
+.page-title.text-center.pro-sec {
+    text-align: center !important;
+    color: white !important;
+}
+
+.page-title.text-center.pro-sec p,
+.page-title.text-center.pro-sec span,
+.page-title.text-center.pro-sec li {
+    font-size: 18px !important;
+}
+
+.alert {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    font-size: 16px;
+}
+
+.alert.alert--success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.line6-l {
+    /* height: 320px; */
+}
+
+.line6-l img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+p.pro-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ppro-box img {
+    margin-bottom: 0;
+}
+
+.ppro-box {
+    height: 330px;
+}
+
+.navbar-brand img {
+    object-fit: contain;
+    height: 100%;
+    width: auto;
+}
+
+.cm-banner {
+    background-image: url(../images/aboutus_background_image.png);
+}
+
+.line3-r img {
+    object-fit: cover;
+    width: 100%;
+    height: 95%;
+}
