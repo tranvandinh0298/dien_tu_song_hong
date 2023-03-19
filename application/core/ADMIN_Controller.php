@@ -121,6 +121,8 @@ class ADMIN_Controller extends PUBLIC_Controller
             $data,
             [
                 '_user' => $this->_user,
+                '_controller' => $this->_controller,
+                '_method' => $this->_method
             ]
         );
         return $this;

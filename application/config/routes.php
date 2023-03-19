@@ -54,7 +54,10 @@ $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+$route['trang-chu'] = 'home';
+
 $route['san-pham/(:any)'] = 'detail/index/$1';
+$route['danh-muc'] = 'detail/category';
 $route['danh-muc/(:any)'] = 'detail/category/$1';
 
 $route['tin-tuc'] = 'news/index';

@@ -26,7 +26,7 @@ class Detail extends Public_Controller
 	{
 		$data = [];
 
-		$data['product'] = $this->product->get_by_alias($alias);
+		$data['product'] = $this->product->get_by_alias($alias, '*', null, ['status' => RECORD_ACTIVE]);
 		if (empty($data['product'])) {
 			redirect('danh-muc');
 		}
@@ -66,14 +66,21 @@ class Detail extends Public_Controller
 	 * @author dinhtv
 	 * @since 11/03/2023
 	 */
-	public function category($alias)
+	public function category($alias = null)
 	{
 		$data = [];
 
 		// danh mục đã chọn
 		$data['category'] = $this->category->get_by_alias($alias);
 		if (empty($data['category'])) {
-			redirect('danh-muc');
+			$data['category'] = $this->category->get_data(
+				[
+					'where' => [
+						'status' => RECORD_ACTIVE
+					]
+				],
+				RETURN_TYPE_FIRST
+			);
 		}
 		// banner tương ứng
 		$data['slide'] = $this->slide->get_data(
@@ -94,18 +101,6 @@ class Detail extends Public_Controller
 				]
 			]
 		);
-		// các danh mục
-		// $data['categories'] = $this->category->get_data(
-		// 	[
-		// 		'where' => [
-		// 			'status' => RECORD_ACTIVE
-		// 		],
-		// 		'sort' => [
-		// 			'id' => 'ASC'
-		// 		]
-		// 	]
-		// );
-
 
 		$this->set_title($data['category']->name)
 			->set_content('pages/classify')

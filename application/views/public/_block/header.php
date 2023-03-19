@@ -16,7 +16,7 @@
         <div class="container">
             <div class="navbar-header">
                 <h1>
-                    <a class="navbar-brand" href="<?= base_url('home') ?>">
+                    <a class="navbar-brand" href="<?= base_url('trang-chu') ?>">
                         <img src="<?= base_url('public/assets/images/song_hong_logo.jpg') ?>" alt="Công ty cổ phần đầu tư và phát triển công nghệ viễn thông sông Hồng">
                     </a>
                 </h1>
@@ -29,7 +29,7 @@
 
             <div id="navbar" class="navbar-collapse collapse navbar-right navigation-holder">
                 <ul class="nav navbar-nav">
-                    <li><a href="<?= base_url('home') ?>"><?= lang('home') ?></a></li>
+                    <li><a href="<?= base_url('trang-chu') ?>"><?= lang('home') ?></a></li>
                     <li class="menu-item-has-children"><a href="<?= base_url('ve-chung-toi') ?>"><?= lang('aboutus') ?></a>
                         <ul class="sub-menu">
                             <li><a href="<?= base_url('ve-chung-toi') ?>"><?= lang('introduction') ?></a></li>
@@ -58,7 +58,7 @@
 
             <div class="m-menu">
                 <ul>
-                    <li><a href="<?= base_url('home') ?>">Trang chủ</a></li>
+                    <li><a href="<?= base_url('trang-chu') ?>">Trang chủ</a></li>
                     <li><a href="<?= base_url('ve-chung-toi') ?>">Về chúng tôi</a></li>
                     <li class="m-list"> <a href="javascript:void(0);">PRODUCTS<span>+</span></a>
                         <ul>

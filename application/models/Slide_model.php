@@ -14,7 +14,8 @@ class Slide_model extends MY_Model
         $this->db->select('*');
         $this->db->from($this->_table);
         $this->db->where('category_id IS NULL', NULL, FALSE);
-        $this->db->order_by('id', 'ASC');
+        $this->db->where('status', RECORD_ACTIVE);
+        $this->db->order_by('id', 'DESC');
         $this->db->limit($limit);
         return $this->db->get()->result();
     }

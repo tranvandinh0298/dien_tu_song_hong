@@ -69,17 +69,17 @@
                 </p>
                 <ul>
                     <li>
-                        <b>2009.08.08</b>
+                        <b>18/11/2009</b>
                         <p>Công ty được thành lập</p>
                     </li>
                     <li>
-                        <b>2005</b>
-                        <p>Signed strategic cooperation agreement with AL Muhaidib and entered Middle East market.
+                        <b>2010</b>
+                        <p>Mở rộng lĩnh vực kinh doanh sản xuất các thiết bị điện tử
                         </p>
                     </li>
                     <li>
-                        <b>2006</b>
-                        <p>Products passed CE,FCC</p>
+                        <b>2011</b>
+                        <p>Khẳng định được vị thế</p>
                     </li>
                     <li>
 

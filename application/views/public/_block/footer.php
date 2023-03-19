@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="col col-lg-6 col-md-6 col-sm-6">
+                <div class="col col-lg-12 col-md-12 col-sm-12">
                     <div class="widget contact-widget service-link-widget">
                         <div class="widget-title">
                             <h3><?= lang('company') ?></h3>

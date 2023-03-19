@@ -31,7 +31,7 @@
                                             <label for=""><?= lang('category') ?></label>
                                             <div class="input-group">
                                                 <select data-role='select' class="form-control select2" name="category_id" style="width: 100%;">
-                                                    <option value="">Tùy chọn</option>
+                                                    <option value="">Dùng làm quảng cáo trên trang chủ</option>
                                                     <?php
                                                     if (!empty($data['categories'])) {
                                                         foreach ($data['categories'] as $category) {

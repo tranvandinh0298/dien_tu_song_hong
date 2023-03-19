@@ -28,7 +28,7 @@ $lang['lastest_news'] = 'Tin tức mới nhất';
 $lang['more_image'] = 'Thêm ảnh';
 
 // Về chúng tôi
-$lang['company'] = 'Công ty';
+$lang['company'] = 'Công ty cổ phần đầu tư và phát triển công nghệ viên thông Sông Hồng';
 $lang['copyright'] = 'Copyright © 2023 SONGHONGTECH. All rights reserved.';
 
 // danh mục

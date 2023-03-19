@@ -7,7 +7,9 @@
                 if (!empty($data['categories'])) {
                     foreach ($data['categories'] as $category) {
                 ?>
-                        <li><a href="<?= base_url('/danh-muc/' . $category->alias) ?>"><?= $category->name ?></a></li>
+                        <li>
+                            <a href="<?= base_url('/danh-muc/' . $category->alias) ?>" <?= !empty($data['category']) && $data['category']->id == $category->id ? 'class="active"' : ''; ?>><?= $category->name ?></a>
+                        </li>
                 <?php
                     }
                 }

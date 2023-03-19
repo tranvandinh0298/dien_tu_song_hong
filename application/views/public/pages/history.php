@@ -17,102 +17,29 @@
         <p>Công ty cổ phần đầu tư và phát tiển công nghệ viễn thông Sông Hồng được thành lập</p>
     </div>
     <div class="his-box">
-        <h4>2010</h4>
+        <h4>2012</h4>
+        <p>Mở rộng lĩnh vực kinh doanh sản xuất các thiết bị điện tử, thiết bị ngoại vi và phần mềm</p>
+    </div>
+    <div class="his-box">
+        <h4>2014</h4>
+        <p>Khẳng định được vị thế trên thị trường Việt Nam</p>
+    </div>
+    <div class="his-box">
+        <h4>2016</h4>
         <p>Hợp tác với các đơn vị lớn như OBITA, ADEL trong lĩnh vực máy móc điện tử</p>
         <img src="<?= base_url('public/assets/images/his7.jpg')?>" alt="shenzhen orbita">
     </div>
     <div class="his-box">
-        <h4>2011</h4>
-        <p>Khẳng định vị thế khi</p>
+        <h4>2018</h4>
+        <p>Phát triển bền vững và lớn mạnh</p>
         <img src="<?= base_url('public/assets/images/his6.jpg')?>" alt="shenzhen orbita">
     </div>
     <div class="his-box">
-        <h4>2007</h4>
-        <p>Export value exceeded 2 million US dollars.</p>
-        <img src="<?= base_url('public/assets/images/his5.jpg')?>" alt="shenzhen orbita">
-    </div>
-    <div class="his-box">
-        <h4>2008</h4>
-        <p>Adapted ERP to better management.</p>
-
-    </div>
-    <div class="his-box">
-        <h4>2009</h4>
-        <p>Product passed En 14846 European standard certification and 200,000 times cycle test.</p>
-
-    </div>
-    <div class="his-box">
-        <h4>2010</h4>
-        <p>Factory adapted ISO9001/2008 and established ORBITA Thailand.</p>
-        <img src="<?= base_url('public/assets/images/his8.jpg')?>" alt="IOS9001 2015">
-    </div>
-    <div class="his-box">
-        <h4>2011</h4>
-        <p>ORBITA lock software interfaced with Fidelio Opera PMS system.</p>
-        <img src="<?= base_url('public/assets/images/his9.jpg')?>" alt="Fidelio Opera PMS">
-    </div>
-    <div class="his-box">
-        <h4>2012</h4>
-        <p>Hotel references exceeded 5000 projects,ORBITA becomes top 3
-            Chinese brands in international market.
-        </p>
-        <img src="<?= base_url('public/assets/images/his10.jpg')?>" alt="ORBITA BRANK">
-    </div>
-    <div class="his-box">
-        <h4>2013</h4>
-        <p>Established ORBITA Vietnam,ORBITA Brazil.
-        </p>
-
-    </div>
-    <div class="his-box">
-        <h4>2014</h4>
-        <p>Invested 46000 square meter garden factory and created the
-            biggest smart lock production capacity in China.
-        </p>
-        <img src="<?= base_url('public/assets/images/his11.jpg')?>" alt="huizhou ORBITA Factory">
-    </div>
-    <div class="his-box">
-        <h4>2015</h4>
-        <p>Established Dubai office,Cambodia office.
-        </p>
-
-    </div>
-    <div class="his-box">
-        <h4>2016</h4>
-        <p>ORBITA ZigBee wireless hotel lock launched, Entered China domestic market.
-        </p>
-
-    </div>
-    <div class="his-box">
-        <h4>2017</h4>
-        <p>Signed agreements with Vienna, Jinjiang Group, Listed as
-            China Hi-Tech Enterprise. GRMS products launched.
-        </p>
-        <img src="<?= base_url('public/assets/images/his12.jpg')?>" alt="Vienna hotel chain">
-    </div>
-    <div class="his-box">
-        <h4>2018</h4>
-        <p>BLE,NB-IOT lock and biometric lock launched.
-        </p>
-        <img src="<?= base_url('public/assets/images/his13.jpg')?>" alt="Vienna hotel chain">
-    </div>
-    <div class="his-box">
-        <h4>2019</h4>
-        <p>Entered Wyndham /Mehood /GSHM hotel group vendor list.
-        </p>
-        <img src="<?= base_url('public/assets/images/his14.jpg')?>" alt="Vienna hotel chain">
-    </div>
-    <div class="his-box">
         <h4>2020</h4>
-        <p>Established GRMS and Smart home departments.
-        </p>
-        <img src="<?= base_url('public/assets/images/his15.jpg')?>" alt="Vienna hotel chain">
+        <p>Tăng trưởng đột phá</p>
     </div>
     <div class="his-box">
-        <h4>2021</h4>
-        <p>Started R&D on ORBITA Cloud Ecosphere involving
-            ORBITA commercial and residential products.
-        </p>
-
+        <h4>2023</h4>
+        <p>Tiếp tục mở rộng các ngành nghề kinh doanh liên quan đến điện tử, viễn thông</p>
     </div>
 </div>

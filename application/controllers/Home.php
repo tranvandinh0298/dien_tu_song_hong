@@ -20,19 +20,8 @@ class Home extends Public_Controller
 	public function index()
 	{
 		$data = [];
-		// $data['slides'] =  $this->slide->get_data(
-		// 	[
-		// 		'limit' => 4,
-		// 		'where' => [
-		// 			'status' => RECORD_ACTIVE,
-		// 		],
-		// 		'sort' => [
-		// 			'id' => 'DESC'
-		// 		]
-		// 	]
-		// );
+
 		$data['slides'] = $this->slide->get_slides();
-		// $data['categories'] = $this->category->get_data(['where' => ['status' => RECORD_ACTIVE],'sort'=> ['id'=> 'ASC']]);
 		$data['newestProducts'] = $this->product->get_data(
 			[
 				'limit' => 4,
