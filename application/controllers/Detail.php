@@ -71,7 +71,7 @@ class Detail extends Public_Controller
 		$data = [];
 
 		// danh mục đã chọn
-		$data['category'] = $this->category->get_by_alias($alias);
+		$data['category'] = $this->category->get_by_alias($alias, '*', null, ['status' => RECORD_ACTIVE]);
 		if (empty($data['category'])) {
 			$data['category'] = $this->category->get_data(
 				[

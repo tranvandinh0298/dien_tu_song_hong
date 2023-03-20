@@ -69,3 +69,5 @@ $route['lien-he'] = 'contact/index';
 
 $route['ve-chung-toi'] = 'aboutus/index';
 $route['lich-su-phat-trien'] = 'aboutus/history';
+
+$route['trang-quan-tri'] = 'dashboard';

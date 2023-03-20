@@ -26,7 +26,10 @@ class Setting extends Admin_Controller
     public function index()
     {
         $data = [];
-
+        $data['breadcrumbs'] = [
+            lang('settings'),
+            lang('common_setting')
+        ];
         if ($this->is_request_post()) {
             $input = $this->input->post();
             $data['input'] = $input;
@@ -45,7 +48,7 @@ class Setting extends Admin_Controller
                 ),
                 'telephone' => $this->set_rules(
                     'telephone',
-                    'telephone',
+                    'Số điện thoại bàn',
                     'trim|required'
                 ),
                 'fax' => $this->set_rules(
@@ -76,7 +79,7 @@ class Setting extends Admin_Controller
                 $this->setting->update_fields_where(['name' => 'skype'], ['value' => $input['skype']]);
                 $this->setting->update_fields_where(['name' => 'address'], ['value' => $input['address']]);
 
-                redirectFlashMessage("Tạo thêm phân loại sản phẩm " . $input['name'] . " thành công", ALERT_SUCCESS, 'setting');
+                redirectFlashMessage("Chỉnh sửa cấu hình thành công", ALERT_SUCCESS, 'setting');
                 log_message('error', "-------------END STORING CATEGORY--------------");
             } else {
                 $data['errors'] = $errors;
@@ -94,7 +97,7 @@ class Setting extends Admin_Controller
         ];
 
         // render
-        $this->set_title('Thêm mới phân loại')
+        $this->set_title(lang('common_setting'))
             ->set_content('index')
             ->set_data($data)
             ->set_layout('_layout')

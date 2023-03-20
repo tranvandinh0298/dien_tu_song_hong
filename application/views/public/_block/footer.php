@@ -11,7 +11,7 @@
                         <ul>
                             <li><?= lang('tel') ?>: <?= $data['settings']['telephone'] ?></li>
                             <li><?= lang('phone') ?>: <?= $data['settings']['phone'] ?></li>
-                            <li><?= lang('fax') ?>FAX: <?= $data['settings']['fax'] ?></li>
+                            <li><?= lang('fax') ?>: <?= $data['settings']['fax'] ?></li>
                             <li><?= lang('skype') ?>: <?= $data['settings']['skype'] ?></li>
                             <li><?= lang('email') ?>: <?= $data['settings']['email'] ?></li>
                             <li><?= lang('address') ?>: <?= $data['settings']['address'] ?></li>
