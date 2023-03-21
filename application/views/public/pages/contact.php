@@ -63,9 +63,9 @@
             </div>
             <div class="clear"></div>
 
-            <div class=" col-md-12  col-sm-12 col-xs-12 con-line"></div>
+            <!-- <div class=" col-md-12  col-sm-12 col-xs-12 con-line"></div> -->
 
-            <h2 class=" col-md-12  col-sm-12 col-xs-12">CÔNG TY TNHH ORBITA VIỆT NAM</h2>
+            <!-- <h2 class=" col-md-12  col-sm-12 col-xs-12">CÔNG TY TNHH ORBITA VIỆT NAM</h2>
             <div class="contact-left">
                 <img src="<?= base_url('public/assets/images/con3.jpg') ?>" alt="orbita factory photo">
             </div>
@@ -77,7 +77,7 @@
                     <li class="con-ic6">Email: orbitavn@gmail.com</li>
                 </ul>
             </div>
-            <div class="clear"></div>
+            <div class="clear"></div> -->
             <!-- <div class=" col-md-12  col-sm-12 col-xs-12 con-line"></div> -->
             <!--惠州-->
             <!-- <h2 class=" col-md-12  col-sm-12 col-xs-12">Huizhou factory</h2>
