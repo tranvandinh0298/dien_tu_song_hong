@@ -180,7 +180,7 @@ if (!function_exists('formInputImage')) {
             $label = lang('image');
         }
         if (empty($name)) {
-            $name = lang('name');
+            $name = 'image';
         }
         $id = $name . rand(0, 1000);
         $html = '
