@@ -4,11 +4,11 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <?php foreach ($data['slides'] as $slide) { ?>
-                        <div class="swiper-slide" style="background: #000 url(<?= $slide->image ?>) no-repeat 50% 10%;background-size: auto 100%;">
+                        <div class="swiper-slide" data-role="banner" data-mobile-image="<?= $slide->mobile_image ?>" style="background-image: url(<?= $slide->image ?>)">
                             <div class="slide__content">
                                 <div class="title txt" style="transition-duration: 1000ms;">
                                     <h2 class="homepage-headline"><?= $slide->name ?></h2>
-                                    <div class="mytxt" style="font-size: 22px !important;color: #fff !important;"><?= $slide->description ?></div>
+                                    <div class="mytxt" style=""><?= $slide->description ?></div>
                                 </div>
                             </div>
                         </div>

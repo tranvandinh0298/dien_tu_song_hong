@@ -83,12 +83,14 @@ class Slide extends Admin_Controller
             if (empty($errors)) {
                 log_message('error', 'validate thành công');
                 // upload file ảnh
-                $uploadResult = uploadImg('image', SLIDE_IMAGE_UPLOAD_PATH);
-                if (!empty($uploadResult['success'])) {
+                $uploadImage = uploadImg('image', SLIDE_IMAGE_UPLOAD_PATH);
+                $uploadMobileImage = uploadImg('mobile_image', SLIDE_IMAGE_UPLOAD_PATH);
+                if (!empty($uploadImage['success']) && !empty($uploadMobileImage['success'])) {
                     $insertData = [
                         'name' => $input['name'],
                         'description' => $input['description'],
-                        'image' => $uploadResult['fileName'],
+                        'image' => $uploadImage['fileName'],
+                        'mobile_image' => $uploadMobileImage['fileName'],
                         'status' => $input['status'],
                         'category_id' => !empty($input['category_id']) ? $input['category_id'] : null,
                     ];
@@ -101,7 +103,7 @@ class Slide extends Admin_Controller
                     }
                     log_message('error', "-------------END STORING SLIDE--------------");
                 } else {
-                    $data['errors'] = $uploadResult['message'];
+                    $data['errors'] = $uploadImage['message'];
                 }
             } else {
                 $data['errors'] = $errors;
@@ -173,12 +175,20 @@ class Slide extends Admin_Controller
             if (empty($errors)) {
                 log_message('error', 'validate thành công');
                 // upload file ảnh
-                if ($_FILES["image"]["size"] > 0) {
-                    $uploadResult = uploadImg('image', SLIDE_IMAGE_UPLOAD_PATH);
-                    if (!empty($uploadResult['success']))
-                        $newImg = $uploadResult['fileName'];
-                    else
-                        $data['errors'] = $uploadResult['message'];
+                if ($_FILES["image"]["size"] > 0 || $_FILES["mobile_image"]["size"] > 0) {
+                    // upload file ảnh
+                    $uploadImage = uploadImg('image', SLIDE_IMAGE_UPLOAD_PATH);
+                    if (!empty($uploadImage['success'])) {
+                        $newImg = $uploadImage['fileName'];
+                    } else {
+                        $data['errors'] = $uploadImage['message'];
+                    }
+                    $uploadMobileImage = uploadImg('mobile_image', SLIDE_IMAGE_UPLOAD_PATH);
+                    if (!empty($uploadMobileImage['success'])) {
+                        $newMobileImg = $uploadMobileImage['fileName'];
+                    } else {
+                        $data['errors'] = $uploadMobileImage['message'];
+                    }
                 }
                 $updateData = [
                     'name' => $input['name'],
@@ -186,8 +196,13 @@ class Slide extends Admin_Controller
                     'status' => $input['status'],
                     'category_id' => !empty($input['category_id']) ? $input['category_id'] : null,
                 ];
-                if (!empty($newImg))
+                if (!empty($newImg)) {
                     $updateData['image'] = $newImg;
+                }
+                if (!empty($newMobileImg)) {
+                    $updateData['mobile_image'] = $newMobileImg;
+                }
+
                 if ($this->slide->update_fields($id, $updateData)) {
                     log_message('error', 'Lưu thành công');
                     // redirect
@@ -273,7 +288,7 @@ class Slide extends Admin_Controller
                     $item->name,
                     showImg($item->image, true),
                     ($item->status == 0) ? showBadgeError('không hoạt động') : showBadgeSuccess('đang hoạt động'),
-                    !empty($category) ? $category->name : '',
+                    !empty($category) ? $category->name : 'Dùng làm quảng cáo trên trang chủ',
                     displayActiveButton('slide/toggle/' . $item->id, $item->status),
                     displayEditButton('slide/edit/' . $item->id)
                 ];

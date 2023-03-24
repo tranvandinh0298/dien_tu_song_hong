@@ -82,6 +82,11 @@ class Product extends Admin_Controller
                     lang('status'),
                     'trim|required'
                 ),
+                'feature' => $this->set_rules(
+                    'feature',
+                    lang('feature'),
+                    'trim|required'
+                ),
             ];
             $errors = $this->validate_fail($rules);
             // nếu không có lỗi thì tức là validate thành công
@@ -100,6 +105,7 @@ class Product extends Admin_Controller
                         'detail' => $input['detail'],
                         'image' => $uploadResult['fileName'],
                         'status' => $input['status'],
+                        'feature' => $input['feature'],
                         'category_id' => $input['category_id']
                     ];
                     if ($this->product->save($insertData)) {
@@ -179,6 +185,11 @@ class Product extends Admin_Controller
                     'status',
                     lang('status'),
                     'trim|required'
+                ),                
+                'feature' => $this->set_rules(
+                    'feature',
+                    lang('feature'),
+                    'trim|required'
                 ),
             ];
             $errors = $this->validate_fail($rules);
@@ -200,6 +211,7 @@ class Product extends Admin_Controller
                     'description' => $input['description'],
                     'detail' => $input['detail'],
                     'status' => $input['status'],
+                    'feature' => $input['feature'],
                     'category_id' => $input['category_id']
                 ];
                 if (!empty($newImg))

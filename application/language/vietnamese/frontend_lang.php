@@ -20,7 +20,7 @@ $lang['fax'] = 'Số Fax';
 $lang['skype'] = 'Skype';
 $lang['email'] = 'Email';
 $lang['address'] = 'Địa chỉ';
-$lang['copy'] = 'Copyright © 2023 SONGHONGTECH. All rights reserved.';
+$lang['copy'] = 'Copyright © 2023 <a href="/trang-chu">SONGHONGTECH</a>. All rights reserved.';
 
 // Chi tiết sản phẩm
 $lang['product_details'] = 'Chi tiết';
@@ -29,7 +29,7 @@ $lang['more_image'] = 'Thêm ảnh';
 
 // Về chúng tôi
 $lang['company'] = 'Công ty cổ phần đầu tư và phát triển công nghệ viên thông Sông Hồng';
-$lang['copyright'] = 'Copyright © 2023 SONGHONGTECH. All rights reserved.';
+$lang['copyright'] = 'Copyright © 2023 <a href="/trang-chu">SONGHONGTECH</a>. All rights reserved.';
 
 // danh mục
 $lang['not_found_product'] = 'Hiện chưa có sản phẩm khả dụng.';
@@ -106,7 +106,11 @@ $lang['name'] = 'Tên/ tiêu đề';
 $lang['description'] = 'Mô tả';
 $lang['category'] = 'Danh mục sản phẩm';
 $lang['status'] = 'Trạng thái';
+$lang['feature'] = 'Mức độ ưu tiên (hiển thị sản phẩm này trước các sản phẩm khác)';
+$lang['feature_up'] = 'Ưu tiên'; 
+$lang['feature_down'] = 'Thông thường'; 
 $lang['image'] = 'Hình ảnh';
+$lang['mobile_image'] = 'Hình ảnh trên mobile';
 $lang['note'] = 'Chú thích';
 $lang['detail'] = 'Chi tiết sản phẩm';
 

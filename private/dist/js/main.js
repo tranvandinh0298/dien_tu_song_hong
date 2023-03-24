@@ -72,23 +72,27 @@ $(function () {
 
 //form image placeholder
 (function formImgPlaceholder() {
-	let imageInput = $("input[name='image']");
-	if (imageInput.length > 0) {
-		$(imageInput).change(function () {
-			if ($(this).prop("files") && $(this).prop("files")[0]) {
-				var reader = new FileReader();
-				reader.onload = function (e) {
-					let imagePreview = $("img#logo-placeholder");
-					if (imagePreview.length > 0) {
-						$(imagePreview).attr("src", e.target.result);
-						$(imagePreview).before(
-							"<p style='margin: 10px 0px;'>Hình ảnh đã chọn: </p>"
-						);
-					}
-				};
-				reader.readAsDataURL($(this).prop("files")[0]);
-			}
-		});
+	let imageInputs = $("input[data-role='image-input']");
+	if (imageInputs.length > 0) {
+		$(imageInputs).each(function() {
+			let imageInput = this;
+			$(imageInput).change(function () {
+				if ($(this).prop("files") && $(this).prop("files")[0]) {
+					var reader = new FileReader();
+					reader.onload = function (e) {
+						let imagePreview = $(imageInput).closest('.form-group').next().find("[data-role='image-placeholder']");
+						if (imagePreview.length > 0) {
+							$(imagePreview).attr("src", e.target.result);
+							$(imagePreview).before(
+								"<p style='margin: 10px 0px;'>Hình ảnh đã chọn: </p>"
+							);
+						}
+					};
+					reader.readAsDataURL($(this).prop("files")[0]);
+				}
+			});
+		})
+
 	}
 })();
 

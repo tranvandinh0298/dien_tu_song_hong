@@ -98,6 +98,9 @@ class Detail extends Public_Controller
 				'where' => [
 					'status' => RECORD_ACTIVE,
 					'category_id' => $data['category']->id
+				], 
+				'sort' => [
+					'feature' => 'DESC',
 				]
 			]
 		);

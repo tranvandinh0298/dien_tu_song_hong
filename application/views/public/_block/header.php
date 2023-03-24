@@ -60,7 +60,7 @@
                 <ul>
                     <li><a href="<?= base_url('trang-chu') ?>">Trang chủ</a></li>
                     <li><a href="<?= base_url('ve-chung-toi') ?>">Về chúng tôi</a></li>
-                    <li class="m-list"> <a href="javascript:void(0);">PRODUCTS<span>+</span></a>
+                    <li class="m-list"> <a href="javascript:void(0);">Danh mục sản phẩm<span>+</span></a>
                         <ul>
                             <?php
                             if (!empty($data['categories'])) {

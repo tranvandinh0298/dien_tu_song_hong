@@ -57,17 +57,20 @@
 }
 
 #logo-current,
-#logo-placeholder {
+#logo-placeholder,
+[data-role="image-placeholder"] {
     height: auto;
     max-width: 100%;
     object-fit: contain;
 }
+
 .login-logo {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.login-logo  img{
+
+.login-logo img {
     width: 60px;
     height: auto;
     object-fit: contain

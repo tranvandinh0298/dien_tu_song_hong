@@ -174,15 +174,22 @@ if (!function_exists('formInputImage')) {
      * @param string $initValue
      * @since 10/03/2023
      */
-    function formInputImage($initValue = '')
+    function formInputImage($initValue = '', $name = '', $label = '')
     {
+        if (empty($label)) {
+            $label = lang('image');
+        }
+        if (empty($name)) {
+            $name = lang('name');
+        }
+        $id = $name . rand(0, 1000);
         $html = '
         <div class="form-group">
-            <label for="">' . lang('image') . '</label>
+            <label for="">' . $label . '</label>
             <div class="input-group">
                 <div class="custom-file">
-                    <input type="file" name="image" class="custom-file-input" id="exampleInputFile">
-                    <label class="custom-file-label" for="exampleInputFile">Chọn file</label>
+                    <input type="file" data-role="image-input" name="' . $name . '" class="custom-file-input" id="' . $id . '">
+                    <label class="custom-file-label" for="' . $id . '">Chọn file</label>
                 </div>
                 <div class="input-group-append">
                     <span class="input-group-text">Tải lên</span>
@@ -194,18 +201,18 @@ if (!function_exists('formInputImage')) {
             $html .= '
             <div class="row">
                 <div class="col-6">
-                    <img src="" id="logo-placeholder" height="auto" alt="">
+                    <img src="" data-role="image-placeholder" height="auto" alt="">
                 </div>
             </div>';
         } else {
             $html .= '
             <div class="row">
                 <div class="col-6">
-                    <p>Logo hiện tại</p>
+                    <p>Hình ảnh hiện tại</p>
                     <img src="' . base_url($initValue) . '" id="logo-current" height="auto" alt="">
                 </div>
                 <div class="col-6">
-                    <img src="" id="logo-placeholder" height="auto" alt="">
+                    <img src="" data-role="image-placeholder" height="auto" alt="">
                 </div>
             </div>';
         }
@@ -232,6 +239,32 @@ if (!function_exists('formInputStatus')) {
                 <select data-role="select" class="form-control select2" name="status" style="width: 100%;">
                     <option value="' . RECORD_ACTIVE . '" ' . $active . '>Hoạt động</option>
                     <option value="' . RECORD_INACTIVE . '" ' . $inActive . '>Ngừng hoạt động</option>
+                </select>
+            </div>
+        </div>
+        ';
+    }
+}
+
+if (!function_exists('formInputFeature')) {
+    /**
+     * function hiển thị input name
+     * @author dinhtv
+     * @param string $initValue
+     * @since 10/03/2023
+     */
+    function formInputFeature($initValue = null)
+    {
+        $active = isset($initValue) && (int) $initValue === RECORD_ACTIVE ? 'selected' : '';
+        $inActive = isset($initValue) && (int) $initValue === RECORD_INACTIVE ? 'selected' : '';
+        return
+            '
+        <div class="form-group">
+            <label for="">' . lang('feature') . '</label>
+            <div class="input-group">
+                <select data-role="select" class="form-control select2" name="feature" style="width: 100%;">
+                    <option value="' . RECORD_ACTIVE . '" ' . $active . '>' . lang('feature_up') . '</option>
+                    <option value="' . RECORD_INACTIVE . '" ' . $inActive . '>' . lang('feature_down') . '</option>
                 </select>
             </div>
         </div>

@@ -21,10 +21,13 @@
                                         <?= formInputName($data['slide']->name); ?>
                                     </div>
                                     <div class="col-md-12">
-                                        <?= formInputEditor('description', $data['slide']->description, 'Mô tả'); ?>
+                                        <?= formInputEditor('description', $data['slide']->description, lang('description')); ?>
                                     </div>
                                     <div class="col-md-12">
-                                        <?= formInputImage($data['slide']->image); ?>
+                                        <?= formInputImage($data['slide']->image,'image', lang('image')); ?>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <?= formInputImage($data['slide']->mobile_image,'mobile_image',lang('mobile_image')); ?>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">

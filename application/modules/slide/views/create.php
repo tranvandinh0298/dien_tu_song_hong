@@ -21,10 +21,13 @@
                                         <?= formInputName(!empty($data['input']['name']) ? $data['input']['name'] : ''); ?>
                                     </div>
                                     <div class="col-md-12">
-                                        <?= formInputEditor('description',!empty($data['input']['description']) ? $data['input']['description'] : '', 'Mô tả'); ?>
+                                        <?= formInputEditor('description',!empty($data['input']['description']) ? $data['input']['description'] : '', lang('description')); ?>
                                     </div>
                                     <div class="col-md-12">
-                                        <?= formInputImage(); ?>
+                                        <?= formInputImage('','image','Hình ảnh'); ?>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <?= formInputImage('', 'mobile_image','Hình ảnh dành cho mobile'); ?>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">

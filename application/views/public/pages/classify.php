@@ -19,7 +19,7 @@
         <?php
         if (!empty($data['products'])) {
             foreach ($data['products'] as $product) { ?>
-                <div class="grid col-md-4 col-xs-12 pro-box">
+                <div class="grid col-6 col-md-4 col-xs-12 pro-box">
                     <div class="pro">
                         <a href="<?= base_url('san-pham/' . $product->alias) ?>">
                             <img src="<?= base_url($product->image) ?>" alt="<?= $product->name ?>">

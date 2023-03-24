@@ -21,7 +21,7 @@
                                         <?= formInputName(!empty($data['input']['name']) ? $data['input']['name'] : ''); ?>
                                     </div>
                                     <div class="col-md-12">
-                                        <?= formInputEditor('description',!empty($data['input']['description']) ? $data['input']['description'] : '', 'Mô tả'); ?>
+                                        <?= formInputEditor('description',!empty($data['input']['description']) ? $data['input']['description'] : '', lang('description')); ?>
                                     </div>
                                     <div class="col-md-12">
                                         <?= formInputEditor('detail',!empty($data['input']['detail']) ? $data['input']['detail'] : '', 'Chi tiết'); ?>
@@ -45,6 +45,9 @@
                                                 </select>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <?= formInputFeature() ?>
                                     </div>
                                     <div class="col-md-12">
                                         <?= formInputStatus() ?>

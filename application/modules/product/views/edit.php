@@ -21,7 +21,7 @@
                                         <?= formInputName($data['product']->name); ?>
                                     </div>
                                     <div class="col-md-12">
-                                        <?= formInputEditor('description',$data['product']->description, 'Mô tả'); ?>
+                                        <?= formInputEditor('description',$data['product']->description, lang('description')); ?>
                                     </div>
                                     <div class="col-md-12">
                                         <?= formInputEditor('detail',$data['product']->detail, 'Chi tiết'); ?>
@@ -49,6 +49,9 @@
                                                 </select>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <?= formInputFeature($data['product']->feature) ?>
                                     </div>
                                     <div class="col-md-12">
                                         <?= formInputStatus($data['product']->status) ?>

@@ -103,7 +103,7 @@
     <script src="<?php echo base_url("private/dist/js/demo.js") ?>"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
     <!-- Custom JS -->
-    <script src="<?php echo base_url("private/dist/js/main.js") ?>"></script>
+    <script src="<?php echo base_url("private/dist/js/main.js?v=".VERSION) ?>"></script>
 
 
     <?php load_view($components['alert']); ?>

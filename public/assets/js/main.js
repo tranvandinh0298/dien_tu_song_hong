@@ -119,4 +119,29 @@ $(document).ready(function () {
 			$(".input").val(num - 1);
 		}
 	});
+
+	let banners = $("[data-role='banner']");
+	if (banners.length > 0) {
+		$(banners).each(function(index, banner) {
+			if (isMobile()) {
+				console.log('mobile');
+				let mobileImage = $(banner).attr("data-mobile-image");
+				console.log(mobileImage);
+				if (mobileImage) {
+					$(banner).css("background-image", 'url(' + mobileImage + ')');
+				}
+			}else {
+				console.log('pc');
+			}
+		})
+	}
 });
+
+
+
+function isMobile() {
+    var currentWidth = window.innerWidth;
+    if (currentWidth < 740)
+        return true;
+    else return false;
+}

@@ -1,4 +1,3 @@
-<link type="text/css" href="<?php echo base_url('public/assets/images/song_hong_logo.png'); ?>" rel="Shortcut Icon">
 <meta property="og:type" content="website">
 <meta property="og:url" content="<?= base_url() ?>">
 <meta property="og:title" content="Công ty cổ phần đầu tư và phát triển công nghệ viễn thông Sông Hồng">

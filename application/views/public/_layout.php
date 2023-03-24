@@ -3,19 +3,14 @@
 
 <head>
     <title><?= !empty($title) ? $title : lang('home') ?></title>
-    <meta charset="utf-8">
-    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="orbita is one of the reputable card operated lock and hotel locking systems manufactuers for the hospitality industry in china,established to offer th">
-    <meta name="keywords" content="hotel lock,hotel door lock,hotel lock system,hotel solutions" />
-    <link rel="author" content="xiaokui-744621610" /> -->
+    <meta charset="UTF-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <?php load_view($components['meta']); ?>
-    <!--滚动广告样式-->
     <link rel="stylesheet" href="<?= base_url('public/assets/css/swiper.min.css') ?>">
-    <!--主要样式-->
     <link rel="stylesheet" href="<?= base_url('public/assets/css/main.css') ?>">
     <link rel="stylesheet" href="<?= base_url('public/assets/css/about.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('public/assets/css/custom.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('public/assets/css/custom.css?v='.VERSION) ?>">
 </head>
 
 <body>
@@ -32,7 +27,7 @@
     <script src="<?= base_url('public/assets/js/apple.js') ?>"></script>
     <!-- All JavaScript files================================================== -->
     <!-- Custom script for this template -->
-    <script src="<?= base_url('public/assets/js/main.js') ?>"></script>
+    <script src="<?= base_url('public/assets/js/main.js?v='.VERSION) ?>"></script>
     <script>
         $(document).ready(function() {
             $("body").floating({

@@ -41,6 +41,7 @@ class Home extends Public_Controller
 					'status' => RECORD_ACTIVE
 				],
 				'sort' => [
+					'feature' => 'DESC',
 					'id' => 'ASC',
 				]
 			]
