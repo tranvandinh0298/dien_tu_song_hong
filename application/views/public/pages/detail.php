@@ -24,7 +24,8 @@
                     <?php
                     if (!empty($data['galleries'])) {
                         for ($i = 0; $i < 4; $i++) {
-                            echo '<div class="Xcontent0' . $i . ' im-box"><img src="' . base_url($data['galleries'][$i]->image) . '"></div>';
+                            if (!empty($data['galleries'][$i]))
+                                echo '<div class="Xcontent0' . $i . ' im-box"><img src="' . base_url($data['galleries'][$i]->image) . '"></div>';
                         }
                     }
                     ?>
