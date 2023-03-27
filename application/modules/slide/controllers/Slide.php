@@ -60,7 +60,7 @@ class Slide extends Admin_Controller
                 'name' => $this->set_rules(
                     'name',
                     lang('name'),
-                    'trim|required'
+                    'trim'
                 ),
                 'description' => $this->set_rules(
                     'description',
@@ -152,7 +152,7 @@ class Slide extends Admin_Controller
                 'name' => $this->set_rules(
                     'name',
                     lang('name'),
-                    'trim|required'
+                    'trim'
                 ),
                 'description' => $this->set_rules(
                     'description',
