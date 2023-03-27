@@ -35,6 +35,8 @@ if (!function_exists('uploadFile')) {
     function uploadFile($field, $path, $config)
     {
         $_this = &get_instance();
+        $name = toNormal($_FILES[$field]['name']);
+        $config['file_name'] = $name;
         $_this->load->library('upload', $config);
         if (!$_this->upload->do_upload($field)) {
             log_message('error', "upload fail : " . json_encode($_this->upload->display_errors(), 256));
