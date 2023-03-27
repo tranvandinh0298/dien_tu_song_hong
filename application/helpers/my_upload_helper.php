@@ -22,6 +22,7 @@ if (!function_exists('uploadImg')) {
         }
         $config['upload_path']          = $path;
         $config['allowed_types']        = 'gif|jpg|png|svg|jpeg|webp';
+        $config['max_size']      = 10*1024;
         $result = uploadFile($field, $path, $config);
         return $result;
     }

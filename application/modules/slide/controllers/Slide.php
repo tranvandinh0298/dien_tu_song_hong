@@ -177,17 +177,22 @@ class Slide extends Admin_Controller
                 // upload file ảnh
                 if ($_FILES["image"]["size"] > 0 || $_FILES["mobile_image"]["size"] > 0) {
                     // upload file ảnh
-                    $uploadImage = uploadImg('image', SLIDE_IMAGE_UPLOAD_PATH);
-                    if (!empty($uploadImage['success'])) {
-                        $newImg = $uploadImage['fileName'];
-                    } else {
-                        $data['errors'] = $uploadImage['message'];
+                    if ($_FILES["image"]["size"] > 0) {
+                        $uploadImage = uploadImg('image', SLIDE_IMAGE_UPLOAD_PATH);
+                        if (!empty($uploadImage['success'])) {
+                            $newImg = $uploadImage['fileName'];
+                        } else {
+                            $data['errors'] = $uploadImage['message'];
+                        }
                     }
-                    $uploadMobileImage = uploadImg('mobile_image', SLIDE_IMAGE_UPLOAD_PATH);
-                    if (!empty($uploadMobileImage['success'])) {
-                        $newMobileImg = $uploadMobileImage['fileName'];
-                    } else {
-                        $data['errors'] = $uploadMobileImage['message'];
+
+                    if ($_FILES["mobile_image"]["size"] > 0) {
+                        $uploadMobileImage = uploadImg('mobile_image', SLIDE_IMAGE_UPLOAD_PATH);
+                        if (!empty($uploadMobileImage['success'])) {
+                            $newMobileImg = $uploadMobileImage['fileName'];
+                        } else {
+                            $data['errors'] = $uploadMobileImage['message'];
+                        }
                     }
                 }
                 $updateData = [
@@ -206,7 +211,8 @@ class Slide extends Admin_Controller
                 if ($this->slide->update_fields($id, $updateData)) {
                     log_message('error', 'Lưu thành công');
                     // redirect
-                    redirectFlashMessage(lang('edit_banner_success'), ALERT_SUCCESS, 'slide');
+                    if (empty($data['errors']))
+                        redirectFlashMessage(lang('edit_banner_success'), ALERT_SUCCESS, 'slide');
                 } else {
                     $data['errors'] = lang('edit_banner_fail');
                 }

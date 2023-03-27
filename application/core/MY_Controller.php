@@ -268,8 +268,8 @@ class MY_Controller extends MX_Controller
      */
     public function return_json($data = null)
     {
-        log_message('error', 'return as Json');
-        log_message('error', json_encode($data));
+        // log_message('error', 'return as Json');
+        // log_message('error', json_encode($data));
         echo json_encode($data, JSON_UNESCAPED_UNICODE);
         die();
     }
@@ -454,7 +454,7 @@ class MY_Controller extends MX_Controller
      */
     public function render()
     {
-        log_message('error', json_encode($this->_viewData));
+        // log_message('error', json_encode($this->_viewData));
         // log_message('error', json_encode($_SESSION));
         $this->load->view(
             $this->_viewLayout,
