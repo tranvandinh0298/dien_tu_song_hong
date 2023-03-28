@@ -109,7 +109,11 @@ p.pro-list {
 }
 
 .cm-banner {
-    background-image: url(../images/aboutus_background_image.png);
+    background-image: url(../images/aboutus_background_image_02.jpg);
+    /* background-image: url(../images/aboutus_background_image_01.webp); */
+}
+.history.new-banner.cm-banner {
+    background-image: url(../images/aboutus_background_image_01.webp);
 }
 
 .line3-r img {

@@ -1,7 +1,7 @@
 <div class="pro-banner new-banner cm-banner m-top110">
-    <div class="his-cover">
+    <!-- <div class="">
         <h2>- Kể từ năm 2009 -</h2>
-    </div>
+    </div> -->
 
 </div>
 <div class="his-menu">
@@ -83,7 +83,7 @@
 </section>
 <!-- About End -->
 <!-- Progress bar Start -->
-<div class="section light-bg">
+<!-- <div class="section light-bg">
     <div class="container-c">
         <div class="row align-items-center">
             <div class="about-l2">
@@ -112,10 +112,10 @@
         </div>
 
     </div>
-</div>
+</div> -->
 <!-- Progress bar End -->
 
-<div class="container-c">
+<!-- <div class="container-c">
 
     <div class="section-title text-center">
         <p class="subtitle"> <span></span> CHỨNG CHỈ <span></span> </p>
@@ -150,4 +150,4 @@
         </ul>
         <div class="clear"></div>
     </div>
-</div>
+</div> -->

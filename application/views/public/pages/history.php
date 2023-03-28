@@ -1,5 +1,5 @@
-<div class="pro-banner new-banner cm-banner m-top110">
-    <div class="his-cover">
+<div class="pro-banner history new-banner cm-banner m-top110">
+    <div class="">
         <h2>- Lịch sử phát triển -</h2>
     </div>
 
@@ -32,7 +32,7 @@
     <div class="his-box">
         <h4>2018</h4>
         <p>Phát triển bền vững và lớn mạnh</p>
-        <img src="<?= base_url('public/assets/images/his6.jpg')?>" alt="shenzhen orbita">
+        <!-- <img src="<?= base_url('public/assets/images/his6.jpg')?>" alt="shenzhen orbita"> -->
     </div>
     <div class="his-box">
         <h4>2020</h4>
