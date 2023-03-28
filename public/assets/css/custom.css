@@ -107,6 +107,9 @@ p.pro-list {
     height: 100%;
     width: auto;
 }
+.cm-banner {
+    min-height: 600px;
+}
 
 .cm-banner {
     background-image: url(../images/aboutus_background_image_02.jpg);
