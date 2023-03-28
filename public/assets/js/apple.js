@@ -7,7 +7,7 @@ window.onload = function () {
 			a = new Swiper(".apple-banner .swiper-container", {
 				autoplay: 5e3,
 				// autoplay: 0,
-				speed: 5e3,
+				speed: 2e3,
 				loop: !0,
 				runCallbacksOnInit: !1,
 				watchSlidesProgress: !0,

@@ -46,9 +46,9 @@
         } ?>
         <div class="clear"></div>
         <div style="margin-top:16px;">
-            <a href="#">
+            <!-- <a href="#">
                 <img src="<?= base_url('public/assets/images/smarAD.jpg') ?>" alt="orbitalock.com" style="width:100%;" />
-            </a>
+            </a> -->
         </div>
     </div>
     <!--end line2-->
@@ -103,7 +103,7 @@
     </div>
 </div>
 <!--end line3-->
-<div class="line4">
+<!-- <div class="line4">
     <div class="line4-l">
         <div class="line4-l-c">
             <div class="OEM">
@@ -118,7 +118,7 @@
         <div class="clear"></div>
     </div>
     <div class="clear"></div>
-</div>
+</div> -->
 <!--end line4-->
 <div class="line5">
     <h2><?= lang('our_products') ?></h2>
