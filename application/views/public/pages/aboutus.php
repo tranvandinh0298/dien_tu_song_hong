@@ -72,7 +72,7 @@
             <div class="about-r">
                 <div class="mr-lg-30">
                     <div class="sigma_dots-wrapper">
-                        <img src="<?= base_url('public/assets/images/about4.jpg') ?>" alt="about">
+                        <img style="width: 100%; height: 100%; object-fit:contain;" src="<?= base_url('public/assets/images/aboutus_background_image.png') ?>" alt="about">
                         <div class="sigma_dots dots-2"></div>
                     </div>
                 </div>
