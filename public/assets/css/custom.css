@@ -139,6 +139,10 @@ p.pro-list {
         margin-top: 5px;
     }
 
+    .cm-banner {
+        min-height: 300px;
+    }
+
     .topbar-c {
         display: flex;
         align-items: center;
