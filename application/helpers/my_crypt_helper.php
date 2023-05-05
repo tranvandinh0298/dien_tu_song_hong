@@ -2,7 +2,8 @@
 
 /**
  * Encrypt/ Decrypt helper
- * dev: dinhtv
+ * 
+ * @author dinhtv
  * created date: 25/2/2022
  * updated date: 25/2/2022
  */
