@@ -24,7 +24,7 @@ class Home extends Public_Controller
 		$data['slides'] = $this->slide->get_slides();
 		$data['newestProducts'] = $this->product->get_data(
 			[
-				'limit' => 4,
+				'limit' => 6,
 				'where' => [
 					'status' => RECORD_ACTIVE
 				],

@@ -21,9 +21,9 @@
     <!--end line1-->
     <div class="line2">
         <h2><?= lang('newest_products') ?></h2>
-        <div class="line2-l">
+        <!-- <div class="line2-l">
             <img src="<?= base_url('public/assets/images/OKK.jpg') ?>" alt="ORBITA E4041 Bluetooth hotel lock">
-        </div>
+        </div> -->
         <?php
         if (!empty($data['newestProducts'])) {
             foreach ($data['newestProducts'] as $product) { ?>
@@ -65,7 +65,7 @@
             </div>
             <div class="line3-l-white">
                 <p>
-                Công ty cổ phần đầu tư và phát triển công nghệ viễn thông sông Hồng đã trở thành một công ty chuyên cung cấp các giải pháp, tích hợp công nghệ toàn diện cho khách sạn.
+                    Công ty cổ phần đầu tư và phát triển công nghệ viễn thông sông Hồng đã trở thành một công ty chuyên cung cấp các giải pháp, tích hợp công nghệ toàn diện cho khách sạn.
                 </p>
                 <ul>
                     <li>
@@ -192,7 +192,7 @@
                         <div class="l6-r">
                             <h2>NÊN LỰA CHỌN KHÓA ĐIỆN TỬ NHƯ THẾ NÀO CHO KHÁCH SẠN, RESORT</h2>
                             <p>
-                            Hiện nay các loại khóa điện tử là lựa chọn của hầu hết các resort, khách sạn thay thế cho ổ khóa cơ trước đây, khi khách thuê phòng sẽ được...
+                                Hiện nay các loại khóa điện tử là lựa chọn của hầu hết các resort, khách sạn thay thế cho ổ khóa cơ trước đây, khi khách thuê phòng sẽ được...
                             </p>
                         </div>
                         <div class="clear"></div>
@@ -222,7 +222,7 @@
                         <div class="l6-r">
                             <h2>TẠI SAO CÁC KHÁCH SẠN THƯỜNG SỬ DỤNG KÉT SẮT KHÓA ĐIỆN TỬ?</h2>
                             <p>
-                            Ngày nay tại những khách sạn, resort...khu nghỉ dưỡng bạn dễ dàng thấy những chiếc két sắt cá nhân đựng...
+                                Ngày nay tại những khách sạn, resort...khu nghỉ dưỡng bạn dễ dàng thấy những chiếc két sắt cá nhân đựng...
                             </p>
                         </div>
                         <div class="clear"></div>
