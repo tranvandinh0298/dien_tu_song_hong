@@ -797,6 +797,7 @@ h2.txt3 img {
 .navbar-nav li a {
     color: #333;
     padding: 10px 18px;
+    text-transform: uppercase;
 }
 
 .navbar-nav li a:hover {
