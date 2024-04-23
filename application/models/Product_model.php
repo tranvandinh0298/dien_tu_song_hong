@@ -34,6 +34,16 @@ class Product_model extends MY_Model
     }
 
     /**
+     * function get a single image of product
+     * @author dinhtv
+     * @since 11/03/2023
+     */
+    public function get_a_image($imageId)
+    {
+        return $this->get_by_id($imageId, '*', $this->_table_gallery);
+    }
+
+    /**
      * function lưu kho ảnh của 
      * @author dinhtv
      * @since 11/03/2023

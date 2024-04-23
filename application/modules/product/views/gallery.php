@@ -13,6 +13,19 @@
                             <h4 class="card-title">Thư viện ảnh</h4>
                         </div>
                         <div class="card-body">
+                            <div class="alert alert-success">
+                                <strong>Lưu ý!</strong> Ổ cứng còn lại <?php
+                                                                        $bytes = disk_free_space("C:");
+                                                                        $units = ['B', 'KB', 'MB', 'GB', 'TB'];
+
+                                                                        $unit = 0;
+                                                                        while ($bytes >= 1024) {
+                                                                            $bytes /= 1024;
+                                                                            $unit++;
+                                                                        }
+                                                                        echo round($bytes, 2) . ' ' . $units[$unit];
+                                                                        ?>
+                            </div>
                             <?php
                             if (!empty($data['galleries'])) {
                             ?>

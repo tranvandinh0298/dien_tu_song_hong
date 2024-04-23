@@ -297,9 +297,11 @@ class Product extends Admin_Controller
      * @author dinhtv
      * @since 11/03/2023
      */
-    public function delete_image($id)
+    public function delete_image($imageId)
     {
-        $result = $this->product->delete_image($id);
+        $image = $this->product->get_a_image($imageId);
+        unlink($image->image);
+        $result = $this->product->delete_image($imageId);
         if ($result) {
             $this->redirect_flash_message('Xóa ảnh thành công', $this->agent->referrer(), ALERT_SUCCESS);
         } else {
