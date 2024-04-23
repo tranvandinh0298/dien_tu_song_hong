@@ -185,7 +185,7 @@ class Product extends Admin_Controller
                     'status',
                     lang('status'),
                     'trim|required'
-                ),                
+                ),
                 'feature' => $this->set_rules(
                     'feature',
                     lang('feature'),
@@ -289,6 +289,22 @@ class Product extends Admin_Controller
             ->set_data($data)
             ->set_layout('_layout')
             ->render();
+    }
+
+
+    /**
+     * function xóa ảnh thư viện ảnh
+     * @author dinhtv
+     * @since 11/03/2023
+     */
+    public function delete_image($id)
+    {
+        $result = $this->product->delete_image($id);
+        if ($result) {
+            $this->redirect_flash_message('Xóa ảnh thành công', $this->agent->referrer(), ALERT_SUCCESS);
+        } else {
+            $this->redirect_flash_message('Xóa ảnh thất bại', $this->agent->referrer());
+        }
     }
 
     /**

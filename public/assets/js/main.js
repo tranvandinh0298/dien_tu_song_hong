@@ -26,8 +26,8 @@
 						if (obj.url) {
 							$li_html.append(
 								'<a href="' +
-									obj.url +
-									'" target="_blank"><span class="iconfont"></span></a>'
+								obj.url +
+								'" target="_blank"><span class="iconfont"></span></a>'
 							);
 						} else {
 							$li_html.append('<span class="iconfont"></span>');
@@ -45,8 +45,8 @@
 							}
 							$li_html.append(
 								'<div class="tooltip parts-li-tip"><div class="tooltip-inner">' +
-									url +
-									"</div></div>"
+								url +
+								"</div></div>"
 							);
 						}
 						$li_html.attr("data-type", obj.type);
@@ -122,7 +122,7 @@ $(document).ready(function () {
 
 	let banners = $("[data-role='banner']");
 	if (banners.length > 0) {
-		$(banners).each(function(index, banner) {
+		$(banners).each(function (index, banner) {
 			if (isMobile()) {
 				console.log('mobile');
 				let mobileImage = $(banner).attr("data-mobile-image");
@@ -130,7 +130,7 @@ $(document).ready(function () {
 				if (mobileImage) {
 					$(banner).css("background-image", 'url(' + mobileImage + ')');
 				}
-			}else {
+			} else {
 				console.log('pc');
 			}
 		})
@@ -140,8 +140,29 @@ $(document).ready(function () {
 
 
 function isMobile() {
-    var currentWidth = window.innerWidth;
-    if (currentWidth < 740)
-        return true;
-    else return false;
+	var currentWidth = window.innerWidth;
+	if (currentWidth < 740)
+		return true;
+	else return false;
+}
+
+// wait for an element to exist
+function waitForElement(selector) {
+	return new Promise(resolve => {
+		if (document.querySelector(selector)) {
+			return resolve(document.querySelector(selector));
+		}
+
+		const observer = new MutationObserver(mutations => {
+			if (document.querySelector(selector)) {
+				resolve(document.querySelector(selector));
+				observer.disconnect();
+			}
+		});
+
+		observer.observe(document.body, {
+			childList: true,
+			subtree: true
+		});
+	});
 }

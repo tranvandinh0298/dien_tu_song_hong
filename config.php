@@ -14,7 +14,7 @@ if (!empty($_SERVER['HTTPS'])) $base = "https://" . $domain;
 define('BASE_URL', $base);
 define('BASE_ADMIN_URL', $base . "admin/");
 
-define('VERSION', '1.2.3');
+define('VERSION', '1.2.4');
 
 // CONFIG EMAIL
 define('SMTP_USER','nhomdoisoat@vnptepay.com.vn');

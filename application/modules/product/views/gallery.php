@@ -16,19 +16,15 @@
                             <?php
                             if (!empty($data['galleries'])) {
                             ?>
-                                <!-- <div>
-                                    <div class="btn-group w-100 mb-2">
-                                        <a class="btn btn-info active" href="javascript:void(0)" data-filter="all"> All items </a>
-                                        <a class="btn btn-info" href="javascript:void(0)" data-filter="<?= GALLERY_ILLUSTRATION ?>"> Hình minh họa </a>
-                                        <a class="btn btn-info" href="javascript:void(0)" data-filter="<?= GALLERY_DETAIL ?>"> Chi tiết sản phẩm </a>
-                                    </div>
-                                </div> -->
                                 <div>
                                     <div class="filter-container p-0 row">
                                         <?php
                                         foreach ($data['galleries'] as $gallery) {
                                         ?>
-                                            <div class="filtr-item col-sm-2" data-category="<?= $gallery->type ?>">
+                                            <div class="filtr-item col-sm-2" data-category="<?= $gallery->type ?>" data-id="<?= $gallery->id; ?>">
+                                                <a href="<?= base_url("product/delete_image/" . $gallery->id) ?>" onclick="return confirm('Bạn có chắc là muốn xóa ảnh này không?');" class="btn btn-outline-danger btn-delete-image">
+                                                    <i class="fa fa-times-circle"></i>
+                                                </a>
                                                 <a href="<?= base_url($gallery->image . "?text=" . $gallery->id) ?>" data-toggle="lightbox" data-title="<?= 'link: ' . $gallery->image ?>">
                                                     <img src="<?= base_url($gallery->image . "?text=" . $gallery->id) ?>" class="img-fluid mb-2" alt="<?= 'link: ' . $gallery->image ?>" />
                                                 </a>

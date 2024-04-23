@@ -42,4 +42,14 @@ class Product_model extends MY_Model
     {
         return $this->save($insertData, $this->_table_gallery);
     }
+
+    /**
+     * function lưu kho ảnh của 
+     * @author dinhtv
+     * @since 11/03/2023
+     */
+    public function delete_image($id)
+    {
+        return $this->hard_delete($id, $this->_table_gallery);
+    }
 }
