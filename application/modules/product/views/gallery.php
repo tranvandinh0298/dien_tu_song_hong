@@ -13,7 +13,7 @@
                             <h4 class="card-title">Thư viện ảnh</h4>
                         </div>
                         <div class="card-body">
-                            <div class="alert alert-success">
+                            <div class="alert alert-info">
                                 <strong>Lưu ý!</strong> Ổ cứng còn lại <?php
                                                                         $bytes = disk_free_space("C:");
                                                                         $units = ['B', 'KB', 'MB', 'GB', 'TB'];

@@ -13,22 +13,31 @@
                             <h4 class="card-title">Chi tiết sản phẩm dạng ảnh</h4>
                         </div>
                         <div class="card-body">
+                            <div class="alert alert-info">
+                                <strong>Lưu ý!</strong> Ổ cứng còn lại <?php
+                                                                        $bytes = disk_free_space("C:");
+                                                                        $units = ['B', 'KB', 'MB', 'GB', 'TB'];
+
+                                                                        $unit = 0;
+                                                                        while ($bytes >= 1024) {
+                                                                            $bytes /= 1024;
+                                                                            $unit++;
+                                                                        }
+                                                                        echo round($bytes, 2) . ' ' . $units[$unit];
+                                                                        ?>
+                            </div>
                             <?php
                             if (!empty($data['galleries'])) {
                             ?>
-                                <!-- <div>
-                                    <div class="btn-group w-100 mb-2">
-                                        <a class="btn btn-info active" href="javascript:void(0)" data-filter="all"> All items </a>
-                                        <a class="btn btn-info" href="javascript:void(0)" data-filter="<?= GALLERY_ILLUSTRATION ?>"> Hình minh họa </a>
-                                        <a class="btn btn-info" href="javascript:void(0)" data-filter="<?= GALLERY_DETAIL ?>"> Chi tiết sản phẩm </a>
-                                    </div>
-                                </div> -->
                                 <div>
                                     <div class="filter-container p-0 row">
                                         <?php
                                         foreach ($data['galleries'] as $gallery) {
                                         ?>
-                                            <div class="filtr-item col-sm-2" data-category="<?= $gallery->type ?>">
+                                            <div class="filtr-item col-sm-2" data-category="<?= $gallery->type ?>" data-id="<?= $gallery->id; ?>">
+                                                <a href="<?= base_url("product/delete_image/" . $gallery->id) ?>" onclick="return confirm('Bạn có chắc là muốn xóa ảnh này không?');" class="btn btn-outline-danger btn-delete-image">
+                                                    <i class="fa fa-times-circle"></i>
+                                                </a>
                                                 <a href="<?= base_url($gallery->image . "?text=" . $gallery->id) ?>" data-toggle="lightbox" data-title="<?= 'link: ' . $gallery->image ?>">
                                                     <img src="<?= base_url($gallery->image . "?text=" . $gallery->id) ?>" class="img-fluid mb-2" alt="<?= 'link: ' . $gallery->image ?>" />
                                                 </a>
@@ -49,7 +58,7 @@
                 <div class="col-12">
                     <div class="card card-default" id="dropzone" data-url="<?= base_url('product/ajax_upload_detail/' . $data['product']->id) ?>">
                         <div class="card-header">
-                        <h3 class="card-title">Tải thêm ảnh tại đây</h3>
+                            <h3 class="card-title">Tải thêm ảnh tại đây</h3>
                         </div>
                         <div class="card-body">
                             <div id="actions" class="row">
