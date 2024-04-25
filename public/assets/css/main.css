@@ -2744,8 +2744,8 @@ h4.entry-title a:hover {
 }
 
 .art-shop-banner {
-    background: url(../cn/images/pro-banner1.jpg) center -160px no-repeat;
-    padding: 140px 0 180px 0;
+    background: url(../cn/images/pro-banner1.jpg) center 0px no-repeat;
+    padding: 140px 0 300px 0;
 }
 
 .Xcontent01 {
